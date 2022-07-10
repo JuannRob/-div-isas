@@ -1,8 +1,9 @@
+import Title from '../components/Title';
 import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <h1>Codo a Codo 4.0 React App</h1>
+    <Title />
   );
 }
 
