@@ -1,0 +1,15 @@
+.Conversor {
+	background-color: red;
+	color: white;
+	text-align: center;
+	padding: 10px;
+}
+
+.Resultado { 
+	color: white;
+	background-color: skyblue;
+}
+
+.inputBlanco { 
+	background-color: white !important; 
+}
