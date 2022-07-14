@@ -1,0 +1,11 @@
+.header-container {
+	position: sticky;
+	background-color: black;
+}
+
+h1 {
+	color: white;
+	margin: 0;
+	padding: 10px;
+	margin-left: 30px;
+}
