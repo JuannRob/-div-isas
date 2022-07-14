@@ -1,10 +1,9 @@
 
 import React, { useEffect, useState } from 'react'
 import { latestRates } from '../services/API';
-import Title from '../components/Title';
 import './App.css';
 import Rates from '../components/Rates';
-import AppName from '../components/AppName';
+import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Conversor from '../components/Conversor';
 
@@ -24,9 +23,8 @@ const App = () => {
   //en un input
   return (
     <>
-      <Title />
-      <AppName /> 
-      <Rates ratesData={ratesData} setBase={setBase}/>
+      <Header /> 
+      <Rates ratesData={ratesData} base={base} setBase={setBase}/>
       <Conversor />
       <Footer />
     </>
