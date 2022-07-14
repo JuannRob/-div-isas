@@ -1,0 +1,33 @@
+.form {
+	background-color: white;
+	text-align: center;
+}
+
+p {
+	margin-top: 0;
+	background-color: skyblue;
+	color: white;
+	padding: 10px;
+	font-size: 20px;
+}
+
+input {
+	padding: 6px;
+	margin-right: 10px;
+	margin-bottom: 15px;
+}
+
+input[type="text"], input[type="submit"] {
+	background-color: yellow;
+}
+
+ul {
+	display: inline-block;
+	text-align: left;
+}
+
+ul li {
+	border: 1px solid black;
+	list-style-type: none;
+
+}

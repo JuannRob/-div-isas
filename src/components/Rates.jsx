@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import '../css/Rates.css'
 
 const Rates = ({ ratesData, setBase }) => {
 
@@ -17,11 +18,13 @@ const Rates = ({ ratesData, setBase }) => {
 
   // Tiene un formulario para cambiar la divisa base, un párrafo que indica la base actual y una lista con todas sus conversiones.
   return (
-    <>
+    <div className="form">
       <form onSubmit={changeBase}>
         <label>
-          Divisa:
-          <input type="text" value={baseInput} onChange={handleChange} placeholder='ARS' />
+          <p>
+            Moneda:
+          </p>
+          <input type="text" value={baseInput} onChange={handleChange} placeholder='Ingrese Moneda Base' />
         </label>
         <input type="submit" value="Mostrar" />
       </form>
@@ -35,7 +38,7 @@ const Rates = ({ ratesData, setBase }) => {
           <li>Actualizando información...</li>
         )}
       </ul>
-    </>
+    </div>
   )
 
 }

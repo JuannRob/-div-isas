@@ -4,6 +4,9 @@ import { latestRates } from '../services/API';
 import Title from '../components/Title';
 import './App.css';
 import Rates from '../components/Rates';
+import AppName from '../components/AppName';
+import Footer from '../components/Footer';
+import Conversor from '../components/Conversor';
 
 //Acá están aplicados los componentes principales y los estados para pasarles
 
@@ -21,8 +24,11 @@ const App = () => {
   //en un input
   return (
     <>
-      <Title /> 
+      <Title />
+      <AppName /> 
       <Rates ratesData={ratesData} setBase={setBase}/>
+      <Conversor />
+      <Footer />
     </>
   );
 }

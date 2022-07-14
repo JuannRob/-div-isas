@@ -16,7 +16,7 @@ export async function latestRates(base) {
 //Función para implementar el conversor. Recibe las dos divisas y la cantidad
 export async function convertCurrency(from, to, amount) {
   try {
-    const res = await fetch(`${URL_BASE}convert?from=${from}&to=${to}&amount=${amount}`)
+    const res = await fetch(`${URL_BASE}/convert?from=${from}&to=${to}&amount=${amount}`)
     const data = await res.json();
     return data;
   } catch (err) {
