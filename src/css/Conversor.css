@@ -1,15 +1,9 @@
-.Conversor {
-	background-color: red;
-	color: white;
-	text-align: center;
+.convertir{
+	margin-bottom:  15px;
+}
+
+.icono{
+	width:18%;
+	height: 12%;
 	padding: 10px;
-}
-
-.Resultado { 
-	color: white;
-	background-color: skyblue;
-}
-
-.inputBlanco { 
-	background-color: white !important; 
 }
