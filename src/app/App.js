@@ -24,8 +24,11 @@ const App = () => {
   return (
     <>
       <Header /> 
-      <Rates ratesData={ratesData} base={base} setBase={setBase}/>
       <Conversor />
+      <br></br>
+      <Rates ratesData={ratesData} base={base} setBase={setBase}/>
+     
+      
       <Footer />
     </>
   );
