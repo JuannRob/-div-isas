@@ -1,0 +1,21 @@
+.form {
+	background-color: white;
+	text-align: center;
+	margin: 0 auto;
+	width:60%;
+	padding:10px 0px;
+}
+
+.table-conversion{
+width:50%;
+margin: 0 auto;
+}
+
+
+p {
+	margin-top: 0;
+	background-color: rgb(240, 245, 250);
+	color: rgb(10, 20, 110);
+	padding: 10px;
+	font-size: 20px;
+}
