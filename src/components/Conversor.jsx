@@ -30,6 +30,15 @@ const Conversor = () => {
     );
   };
 
+  //Redondear resultados
+  const roundNumber = (num) => {
+    if (num > 0.01) {
+      return Math.round(num * 100) / 100;
+    } else {
+      return num;
+    }
+  }
+
   return (
     <div className="container text-center">
       <img src={icono} className="icono" alt="icono"></img>
@@ -109,10 +118,10 @@ const Conversor = () => {
             {result.result > 0 && (
               <>
                 <p>
-                  {current.monto} {current.from} = {result.result} {current.to}
+                  {current.monto} {current.from} = {roundNumber(result.result)} {current.to}
                 </p>
                 <p>
-                  1 {current.from} = {result.info.rate} {current.to}
+                  1 {current.from} = {roundNumber(result.info.rate)} {current.to}
                 </p>
               </>
             )}

@@ -30,6 +30,15 @@ const Rates = ({ ratesData, setBase }) => {
     return filteredRates;
   };
 
+  //Redondear resultados
+  const roundNumber = (num) => {
+    if (num > 0.01) {
+      return Math.round(num * 100) / 100;
+    } else {
+      return num;
+    }
+  }
+
   return (
     <div className="form">
       <div className="table-conversion">
@@ -76,7 +85,7 @@ const Rates = ({ ratesData, setBase }) => {
                       <b>{key}</b>
                     </td>
                     <td>
-                      {value.toString()} {key}
+                      {roundNumber(value).toString()} {key}
                     </td>
                   </tr>
                 ))}
