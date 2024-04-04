@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../css/Rates.css";
 
 const Rates = ({ ratesData, setBase }) => {
-  const [baseInput, setBaseInput] = useState(""); //Almacena los cambios que se van haciendo en el input
+  const [baseInput, setBaseInput] = useState("USD"); //Almacena los cambios que se van haciendo en el input
 
   //Actualiza el state 'baseInput'
   const handleChange = (e) => {
@@ -17,7 +17,7 @@ const Rates = ({ ratesData, setBase }) => {
 
   //Filtra solo las conversiones más relevantes
   const filterRates = () => {
-    const filters = ["USD", "ARS", "EUR", "GBP", "JPY", "BTC"]
+    const filters = ["USD", "ARS", "EUR", "GBP", "JPY", "BTC"];
     let filteredRates = {};
     filters.forEach((curr) => {
       filteredRates[curr] = ratesData.rates[curr];
@@ -37,10 +37,10 @@ const Rates = ({ ratesData, setBase }) => {
     } else {
       return num;
     }
-  }
+  };
 
   return (
-    <div className="form">
+    <div className="form my-5">
       <div className="table-conversion">
         <form onSubmit={changeBase} className="row g-3">
           <h4>Buscar conversiones de tu moneda</h4>

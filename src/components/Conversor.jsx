@@ -8,7 +8,7 @@ const Conversor = () => {
   const [to, setTo] = useState("");
   const [monto, setMonto] = useState("");
   const [result, setResult] = useState("");
-  const [current, setCurrent] = useState({from: '', to: '', monto: ''})//mantiene los últimos datos que se buscaron
+  const [current, setCurrent] = useState({ from: "", to: "", monto: "" }); //mantiene los últimos datos que se buscaron
 
   //llama a la función de conversión de servicios
   const cambiaYA = (e) => {
@@ -20,8 +20,8 @@ const Conversor = () => {
     myPromise.then(
       function (value) {
         setResult(value);
-        setCurrent(prevState => {
-          return {...prevState, from: from, to: to, monto: monto};
+        setCurrent((prevState) => {
+          return { ...prevState, from: from, to: to, monto: monto };
         });
       },
       function (err) {
@@ -37,7 +37,7 @@ const Conversor = () => {
     } else {
       return num;
     }
-  }
+  };
 
   return (
     <div className="container text-center">
@@ -46,7 +46,11 @@ const Conversor = () => {
         <div className="card-header">
           <ul className="nav nav-tabs card-header-tabs">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="true" href="#">
+              <a
+                className="nav-link active"
+                aria-current="true"
+                href="Convert button"
+              >
                 Convertir
               </a>
             </li>
@@ -118,10 +122,12 @@ const Conversor = () => {
             {result.result > 0 && (
               <>
                 <p>
-                  {current.monto} {current.from} = {roundNumber(result.result)} {current.to}
+                  {current.monto} {current.from} = {roundNumber(result.result)}{" "}
+                  {current.to}
                 </p>
                 <p>
-                  1 {current.from} = {roundNumber(result.info.rate)} {current.to}
+                  1 {current.from} = {roundNumber(result.info.rate)}{" "}
+                  {current.to}
                 </p>
               </>
             )}
